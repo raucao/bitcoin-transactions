@@ -12,16 +12,19 @@ body {
   color: #555;
 }
 
-header {
-  margin-bottom: 20px;
-}
-
 h1 {
   font-size: 16px;
   color: #888;
+  float: left;
+}
+
+header .price {
+  float: right;
 }
 
 section#transactions {
+  clear: both;
+  padding-top: 20px;
 }
 
 table {
@@ -38,11 +41,14 @@ td {
   line-height: 22px;
 }
 
-td.sum, td.size {
+td.btc, td.usd, td.size {
   text-align: right;
 }
 
-td.sum {
-  padding-right: 0;
+td.usd, td.btc {
   color: #888;
+}
+
+td.usd {
+  padding-right: 0;
 }
