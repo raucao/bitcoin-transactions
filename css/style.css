@@ -3,7 +3,7 @@
   margin: 0;
   border: none;
   box-sizing: border-box;
-  font: 16px Menlo, monospace;
+  font: 14px Menlo, monospace;
 }
 
 body {
@@ -13,7 +13,6 @@ body {
 }
 
 h1 {
-  font-size: 16px;
   color: #888;
   float: left;
 }
@@ -38,7 +37,7 @@ th {
 
 td {
   padding-right: 25px;
-  line-height: 22px;
+  line-height: 20px;
 }
 
 td.btc, td.usd, td.size {
