@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bitcoin Transactions</title>
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Bitcoin Transaction Monitor</h1>
+  </header>
+
+  <script type="text/x-handlebars">
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="index">
+    <section id="transactions">
+      <table>
+        <thead>
+          <th>Hash</th>
+          <th>Size</th>
+          <th>Relayed by IP</th>
+          <th>Timestamp</th>
+          <th>Total</th>
+        </thead>
+        <tbody>
+          {{#each item in arrangedContent}}
+          <tr>
+            <td>{{item.hash}}</td>
+            <td class="size">{{item.size}}</td>
+            <td>{{item.relayed_by}}</td>
+            <td>{{item.time}}</td>
+            <td class="sum">{{satoshis_to_btc item.total}}</td>
+          </tr>
+          {{/each}}
+        <tbody>
+      </table>
+    </section>
+  </script>
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.1.2.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
