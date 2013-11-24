@@ -45,7 +45,7 @@ App.Transaction = Ember.Object.extend({
 
 // WS
 
-var wsUri = "ws://ws.blockchain.info/inv";
+var wsUri = "wss://ws.blockchain.info/inv";
 
 function init() {
   output = document.getElementById("output");
