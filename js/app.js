@@ -193,8 +193,27 @@ function draw() {
   context.save();
   blank();
   for (var i = 0; i < flakeArray.length; i++) {
-    bufferCanvasCtx.fillStyle = "rgba(136, 136, 136, 1)";
-    bufferCanvasCtx.fillRect(flakeArray[i].x, flakeArray[i].y, flakeArray[i].width, flakeArray[i].height);
+    var length = flakeArray[i].width / 2;
+    var radgrad = bufferCanvasCtx.createRadialGradient(
+      flakeArray[i].x + length,
+      flakeArray[i].y + length,
+      0,
+      flakeArray[i].x + length,
+      flakeArray[i].y + length,
+      length
+    );
+    radgrad.addColorStop(0, '#c90');
+    radgrad.addColorStop(0.99, '#c90');
+    radgrad.addColorStop(1, '#121212');
+
+    bufferCanvasCtx.fillStyle = radgrad;
+
+    bufferCanvasCtx.fillRect(
+      flakeArray[i].x,
+      flakeArray[i].y,
+      flakeArray[i].width,
+      flakeArray[i].height
+    );
   }
   context.drawImage(bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height);
   context.restore();
