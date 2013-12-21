@@ -51,3 +51,7 @@ td.usd, td.btc {
 td.usd {
   padding-right: 0;
 }
+
+canvas#visualizer {
+  margin-top: 25px;
+}
