@@ -16,7 +16,9 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="index">
-    <canvas id="visualizer"></canvas>
+    {{#view App.VisualizationView}}
+      <canvas id="visualizer"></canvas>
+    {{/view}}
     <section id="transactions">
       <table>
         <thead>
