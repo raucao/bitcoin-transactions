@@ -233,7 +233,7 @@ function doSend(message) {
 }
 
 function fetchGeneralInfo() {
-  $.getJSON("https://cors.5apps.com/?uri=http://blockchain.info/stats?format=json", function(data){
+  $.getJSON("https://cors.5apps.com/?uri=https://blockchain.info/stats?format=json", function(data){
     App.set("bitcoinInfo", data);
   });
   setTimeout(fetchGeneralInfo, 10000);
